@@ -25,16 +25,24 @@ public class AnimalFarm {
 		for(int i=0;true; i++) {
 	String response =	JOptionPane.showInputDialog("Which animal do you want?");
 	
-			if(response=="dog") {
-					playNoise(woofFile);
-			}else if(response=="duck") {
-				playNoise(quackFile);
-			}else if(response=="cow") {
-			playNoise(mooFile);
+			if(response.equals("dog")) {
+					playWoof();
+			}else if(response.equals("duck")) {
+				playQuack();
+			}else if(response.equals("cat")) {
+				playMeow();
+			}else if(response.equals("llama")) {
+				playLlama();
+			}else if(response.equals("cow")){
+			playMoo();
 	}else JOptionPane.showMessageDialog(null,"Try Again");}}
 
 	void playMoo() {
 		playNoise(mooFile);
+	}
+
+	void playMeow() {
+		playNoise(meowFile);
 	}
 
 	void playQuack() {
@@ -43,6 +51,10 @@ public class AnimalFarm {
 
 	void playWoof() {
 		playNoise(woofFile);
+	}
+
+	void playLlama() {
+		playNoise(llamaFile);
 	}
 
 	String quackFile = "quack.wav";
