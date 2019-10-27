@@ -1,3 +1,4 @@
+package _14_rollercoaster;
 import javax.swing.JOptionPane;
 
 public class rollercoaster {
